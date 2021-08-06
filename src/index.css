@@ -276,7 +276,7 @@ textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 
-  padding: 5px;
+  padding: 0 20px;
   
   width: 90%;
   height: 355px;
