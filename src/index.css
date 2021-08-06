@@ -11,3 +11,735 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(105, 103, 103);
+}
+input:-ms-input-placeholder {
+  color: rgb(105, 103, 103);
+}
+textarea::-webkit-input-placeholder {
+  color: rgb(105, 103, 103);
+}
+textarea:-ms-input-placeholder {
+  color: rgb(105, 103, 103);
+}
+
+.clear {
+  clear: both;
+}
+
+.pageWrapperLandingPage {
+  /* background: linear-gradient(21.8deg, #015896, #AEF3FF); */
+  height: 100vh;
+  /* min-height: 100vh; */
+}
+
+@media screen and (max-width: 767px) {
+  .pageWrapperLandingPage {
+    /* background: linear-gradient(55deg, #015896, #AEF3FF); */
+    height: 100vh;
+    /* min-height: 100vh; */
+
+    position: relative;
+    clear: both;
+  }
+}
+
+.pageHeaderLandingPage {
+  font-size: 35px;
+  font-weight: 400;
+  color: black;
+
+  /* padding-top: 15px; */
+  text-align: center;
+  letter-spacing: 1px;
+
+}
+
+.pageHeaderUnderBarLandingPage {
+  height: 0;
+  margin: auto;
+  padding-top: 10px;
+  width: 70px;
+  border-bottom: 1px solid black;
+}
+
+.pageWrapper {
+  /* background: linear-gradient(21.8deg, #015896, #AEF3FF); */
+  background-color: white;
+  height: 100vh;
+
+}
+
+@media screen and (max-width: 767px) {
+  .pageWrapper {
+    /* background: linear-gradient(55deg, #1884d1, #AEF3FF); */
+    background-color: white;
+    height: 100vh;
+
+    position: relative;
+    clear: both;
+
+  }
+}
+
+.pageHeader {
+  font-size: 35px;
+  font-weight: 400;
+  color: black;
+
+  padding-top: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+
+}
+
+.pageHeaderUnderBar {
+  height: 0;
+  margin: auto;
+  padding-top: 10px;
+  width: 70px;
+  border-bottom: 1px solid black;
+}
+
+.footerUnderBar {
+  height: 0;
+  margin: auto;
+  padding-top: 5px;
+  width: 100%;
+  border-bottom: 1px solid #bebdbd;
+}
+
+.landingPageGreeting {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-weight: lighter;
+  line-height: 35px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.txtBold {
+  font-weight: normal;
+}
+
+.crossBold {
+  font-weight: normal;
+  font-size: 100px;
+  height: 70px;
+}
+
+.landingPageBtnWrapper {
+  animation: fadeInFromBottom 1.0s ease-in-out;
+
+  height: 180px;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  /* padding-bottom: 55px; */
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 3;
+    transform: none;
+  }
+}
+
+.landingPageBtn {
+  margin-top: 20px;
+  height: 60px;
+  width: 200px;
+  background-color: transparent;
+
+  border: 0.5px solid black;
+  color: black;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.landingPageBtn:hover {
+  color: black;
+  background-color: rgb(231, 230, 230);
+  opacity: 0.85;
+  font-weight: 600;
+  transition: all 0.6s ease-out;
+}
+
+.landingPageFooter {
+  background-color: #F1F1F1;
+  position: fixed;
+  text-align: left;
+  bottom: 0;
+  color: black;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.landingPageFooterTitle {
+  /* float: left; */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.landingPageFooterDescription {
+  display: block;
+  font-size: 12px;
+  white-space: pre-line;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.headWrapperDefault {
+  position: fixed;
+  text-align: center;
+  z-index: 50;
+  z-index: 1;
+  width: 100%;
+  height: 64px;
+  color: white;
+
+  transition: all 0.2s ease-in-out;
+
+  left: 0;
+  top: 0;
+  /* transition: background-color .2s ease; */
+}
+
+.headWrapperScrollDown {
+  position: fixed;
+  text-align: center;
+  z-index: 50;
+  z-index: 1;
+  /* color: white ; */
+  transition: all 0.3s ease-in-out;
+
+  width: 100%;
+  height: 64px;
+  top: 0;
+  /* border-bottom: 1px solid #aaaaaa; */
+  opacity: 0.2;
+}
+
+.headText {
+  margin: 20px;
+  font-weight: 80;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+.bodyWrapper {
+  padding-top: 85px;
+  position: relative;
+  /* display: inline-block; */
+  /* clear: both; */
+}
+
+.inputPageTitle {
+  height: 60px;
+  width: 360px;
+
+  margin: 0 auto;
+  position: relative;
+  padding-top: 95px;
+
+  animation: fadeInFromBottom 1.0s ease-in-out;
+
+  text-align: center;
+  color: black;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.inputFormWrapper {
+  text-align: center;
+  padding-top: 15px;
+  width: 100%;
+  height: 350px;
+}
+
+.inputForm {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+  
+  width: 90%;
+  height: 355px;
+  /* border: 1px solid #1c1c1f; */
+}
+
+.inputName {
+  display: inline-block;
+  vertical-align: middle;
+  width: 95%;
+  height: 40px;
+  margin-bottom: 5px;
+  border: 0.5px solid black;
+  background-color: transparent;
+  font-size: large;
+}
+
+.inputList {
+  display: inline-block;
+  white-space: pre-line;
+  vertical-align: middle;
+  width: 95%;
+  height: 250px;
+  border: 0.5px solid black;
+  background-color: transparent;
+  font-size: large;
+  line-height: 30px;
+}
+
+.inputContent {
+  display: inline-block;
+  vertical-align: middle;
+  width: 95%;
+  height: 250px;
+  border: 0.5px solid black;
+  background-color: transparent;
+  font-size: large;
+  line-height: 30px;
+}
+
+.prayerListContentBtn {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+/* button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+} */
+
+
+
+.deleteBtn {
+  float: left;
+
+  margin: 0 auto;
+  background-color: #ff180b;
+  border: 0.5px solid #ff180b;
+  /* margin-left: 1px; */
+  color: white;
+  font-weight: 400;
+  font-size: medium;
+
+  transition: all 0.3s ease-in-out;
+  width: 184px;
+  height: 35px;
+  border-radius: 5px 5px 5px 5px;
+}
+.deleteBtn:hover {
+  background-color: #f04e46;
+  box-shadow: 0px 0px 1.5px 0.5px #f04e46;
+  border: 0.5px solid #f04e46;
+}
+
+.editBtn {
+  float: left;
+
+  margin: 0 auto;
+  background-color: #45d2e2;
+  border: 0.5px solid #45d2e2;
+  /* margin-right: 1px; */
+  color: white;
+  font-weight: 400;
+  font-size: medium;
+
+  transition: all 0.3s ease-in-out;
+  width: 184px;
+  height: 35px;
+
+  border-radius: 5px 5px 5px 5px;
+}
+.editBtn:hover {
+  background-color: #80e0e9;
+  box-shadow: 0px 0px 1.5px 0.5px #80e0e9;
+  border: 0.5px solid #80e0e9;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  font-size: large;
+  color: #fff;
+  background-color: black;
+  border: 0.5px solid black;
+  margin-left: 1px;
+  transition: all 0.6s ease-out;
+
+  width: 95%;
+  height: 35px;
+}
+.submitBtn:hover {
+  background-color: #aaaaaa;
+  box-shadow: 0px 0px 1.5px 0.5px #f1f1f1;
+  border: 0.5px solid #aaaaaa;
+}
+
+.editCompleteBtn {
+  background-color: #4834d4;
+  border: 0.5px solid #4834d4;
+}
+.editCompleteBtn:hover {
+  background-color: #686de0;
+  box-shadow: 0px 0px 3px 1px #686de0;
+}
+
+.writeNewBtn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+  box-sizing: border-box;
+  background-color: #3aa8fc;
+  border: 0.5px solid #3aa8fc;
+
+  width: 130px;
+  height: 50px;
+
+  font-size: large;
+}
+.writeNewBtn:hover {
+  background-color: #188cff;
+  box-shadow: 0px 0px 3px 1px #188cff;
+  border: 0.5px solid #188cff;
+}
+
+.dateCollectionBtn {
+  margin: 0 auto;
+  display: block;
+  /* position: fixed;
+  bottom: 10; */
+  /* vertical-align: middle; */
+  background-color: black;
+  border: 0.5px solid black;
+
+  width: 378px;
+  height: 50px;
+
+  border-radius: 5px 5px 5px 5px;
+
+  transition: all 0.3s ease-in-out;
+  opacity: 95%;
+  color: #fff;
+  font-size: large;
+}
+.dateCollectionBtn:hover {
+  background-color: #aaaaaa;
+  box-shadow: 0px 0px 1.5px 0.5px #f1f1f1;
+  border: 0.5px solid #aaaaaa;
+  color: white;
+}
+
+.btn_group1 {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+
+  height: 60px;
+}
+
+.prayerListContentBtnImg {
+  background-color: white;
+  width: 100%;
+}
+
+.pagination {
+  margin: 40px 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+}
+
+.paginationItemSelect {
+  min-width: 26px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.paginationItemNonSelect {
+  min-width: 26px;
+  color: black;
+  text-decoration: none;
+  font-weight: smaller;
+  cursor: pointer;
+}
+
+.footerWrapper {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 30px;
+  /* margin-bottom: 30px; */
+  border-top: 1px thin lightgray;
+  border-color: black;
+  width: 90%;
+  background-color: transparent;
+}
+
+.contactWrapper {
+  /* padding-bottom: 15px; */
+  margin: 0 auto;
+}
+
+.contactDescription {
+  color: black;
+  font-size: 15px;
+  letter-spacing: 0em;
+  line-height: 1.6;
+  /* font-family: 'Do Hyeon'; */
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.contactDescriptionEmail {
+  font-size: 18px;
+  color: black;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 95%;
+}
+
+.img {
+  height: 32px;
+  width: 32px;
+}
+
+.copyright {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Do Hyeon';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0em;
+  color: #fff;
+  display: inline-block;
+}
+
+.copyrightFlash {
+  margin-top: 10px;
+  text-align: center;
+  /* font-family: 'Do Hyeon'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0em;
+  color: black;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.copyrightWrapper {
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  /* padding-top: 30px; */
+  margin: 0 auto;
+  width: 95%;
+}
+
+.flashLogo {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.reportsBody {
+  box-sizing: border-box;
+  max-width: 1300px;
+  /* width: 90%; */
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  padding: 0 20px;
+  letter-spacing: -.4px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  overflow: auto;
+
+  /* background-color: #f8f8f8; */
+
+  height: 450px;
+  /* clear: both; */
+}
+
+
+.prayerListContent {
+  width: 100%;
+  animation: fadeInFromBottom 1.0s ease-in-out;
+}
+
+.prayerListContentText {
+  padding-top: 19px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid #eeeef0;
+  background-color: #f8f8f8;
+}
+
+.prayerListContentTextName {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 16px;
+  /* width: 354px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  overflow: hidden;
+
+  font-size: 25px;
+  font-weight: normal;
+  color: black;
+}
+
+.prayerListContentSimpleDate {
+  width: 70px;
+  height: 20px;
+  float: right;
+  font-size: 15px;
+  color: rgb(80, 79, 79);
+
+}
+
+.prayerListContentBtn {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  /* margin-left: 10px; */
+  cursor: pointer;
+  /* float: right; */
+  margin: 0 auto;
+}
+
+.prayerListContentBtnImg {
+  background-color: transparent;
+  width: 100%;
+}
+
+.prayerListContentPreview {
+  font-size: 18px;
+  letter-spacing: -.32px;
+  font-weight: 350;
+  color: black;
+
+  padding: 5px;
+
+  width: 360px;
+  height: 25px;
+  line-height: 28px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+
+}
+
+.prayerListContentDescription {
+  white-space: pre-line;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 350;
+  width: 100%;
+  padding: 5px;
+  color: black;
+  line-height: 28px;
+
+  transition: all 0.3s ease-in-out;
+
+  /* border-top: 0.5px dotted #D8D8D8; */
+}
+
+.prayerListContentDltEdtBtn {
+  margin: 0 auto;
+  width: 368px;
+  height: 40px;
+}
+
+.dateInputForm {
+  display: block;
+  text-align: center;
+
+  height: 100px;
+  width: 100%;
+
+  padding-top: 85px;
+
+}
+
+.dateInputFormHeader {
+
+  height: 10px;
+}
+
+.dateInputFormBody {
+  height: 60px;
+}
+
+.dateInputFormTail {
+
+  height: 10px;
+}
+
+.startDateInput {
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+}
+
+.endDateInput {
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+}
+
+.dateCollectionNull {
+  padding-top: 85px;
+
+  height: 50px;
+  color: black;
+  font-size: large;
+}
