@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+```
+git add .
+git commit -m "message"
+git push -u origin main
+```
+
 In the project directory, you can run:
 
 ### `yarn start`
