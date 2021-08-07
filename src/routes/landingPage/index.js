@@ -6,7 +6,7 @@ import Footer from '../../components/footer';
 const LandingPage = () => {
     return (
         <>
-            <div class="pageWrapperLandingPage">
+            <div class="pageWrapper">
                     <div class="pageHeaderLandingPage">
                         <div>
                             <span class="crossBold">†</span>

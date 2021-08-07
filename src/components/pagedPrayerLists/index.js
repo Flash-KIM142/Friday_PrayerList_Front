@@ -65,8 +65,23 @@ const PagedPrayerListContent = ( {data} ) => {
                         <div class="prayerListContentDescription"  onClick={() => setIsClicked(!isClicked)}>
                             {data.content}
                         </div>
-                        <div class="prayerListContentDltEdtBtn">
-                            {/* <span>{data.createdTime}</span> */}
+                        <div class="dropdown">
+                            <button class="dropbtn">&#183;&#183;&#183;</button>
+                            <div class="dropdown-content">
+                                <Link to={`/edit/${data.id}`} style={{ color: "green", }}>
+                                    수정
+                                </Link>
+                                <div style={{ color: "red", }} onClick={() => {
+                                    if(window.confirm('정말 삭제하시겠습니까?')===true){
+                                        deletePrayerList(data.id);
+                                    }
+                                    else{
+                                        return false;
+                                    }}}>
+                                삭제</div>
+                            </div>
+                        </div>
+                        {/* <div class="prayerListContentDltEdtBtn">
                             <Link to={`/edit/${data.id}`}>
                                 <button class="editBtn">수정</button>
                             </Link>
@@ -80,15 +95,8 @@ const PagedPrayerListContent = ( {data} ) => {
                                     return false;
                                 }
                                 }}>삭제</button>
-                        </div>
+                        </div> */}
                     </div>
-                    {/* <div class="prayerListContentBtn" onClick={() => setIsClicked(!isClicked)}>
-                        <img
-                            class="prayerListContentBtnImg"
-                            src="img/upArrow.png"
-                            alt="열려 있을때"
-                        />
-                    </div> */}
                 </div>
             )}
         </>

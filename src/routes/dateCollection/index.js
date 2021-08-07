@@ -28,21 +28,7 @@ const DateCollection = () => {
     return (
         <>
             <Header />
-
-            {/* <div class="dateInputFormTail">
-                    <button class="submitBtn"
-                        onClick={() => {
-                            if(window.confirm('형식을 맞춰 썼습니까?')===true){
-                                getPrayerListsOfThisWeek();
-                            }
-                            else{
-                                return false;
-                            }
-                        }}>이번주 기도제목 모아보기</button>
-                </div> */}
-
             <DateCollectionPrayerLists data={prayerLists} />
-
             <Footer />
         </>
     )

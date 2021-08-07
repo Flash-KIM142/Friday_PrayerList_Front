@@ -83,14 +83,6 @@ const Home = () => {
                         )}
                     </ul>
 
-                    {/* <div class="btn_group1">
-                        <Link to="/write">
-                            <button class="writeNewBtn">기도제목 작성</button>
-                        </Link>
-                        <Link to="/dateCollection">
-                            <button class="dateCollectionBtn">모아보기</button>
-                        </Link>
-                    </div> */}
                     <Link to="/dateCollection">
                         <button class="dateCollectionBtn">아번주 기도제목 모아보기</button>
                     </Link>
