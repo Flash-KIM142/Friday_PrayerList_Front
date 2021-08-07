@@ -6,26 +6,14 @@ import Footer from '../../components/footer';
 import DateCollectionPrayerLists from '../../components/dateCollection';
 
 const DateCollection = () => {
-    const initialDateInputs = {
-        startDate: '',
-        endDate: '',
-    }
-
     const [prayerLists, setPrayerLists] = useState([]);
 
-    const [dateInputs, setDateInputs] = useState(initialDateInputs);
+    useEffect(()=> {
+        getPrayerListsOfThisWeek();
+    }, [])
 
-    const handleInputChange = e => {
-        const { name, value } = e.target;
-        setDateInputs({ ...dateInputs, [name]: value })
-    }
-
-    // useEffect(()=> {
-    //     getPrayerListsBetweenTwoDates();
-    // }, [dateInputs])
-
-    const getPrayerListsBetweenTwoDates = () => {
-        ApiService.getPrayerListsBetweenTwoDates(dateInputs.startDate, dateInputs.endDate)
+    const getPrayerListsOfThisWeek = () => {
+        ApiService.getPrayerListsOfThisWeek()
         .then(res => {
             console.log(res.data.value);
             setPrayerLists(res.data.value);
@@ -40,39 +28,18 @@ const DateCollection = () => {
     return (
         <>
             <Header />
-            
-            <div class="dateInputForm">
-                <div class="dateInputFormHeader">
 
-                </div>
-
-                <div class="dateInputFormBody">
-                    <input class="startDateInput" 
-                        value={dateInputs.startDate} 
-                        name="startDate" 
-                        placeholder="ex) 2021-07-29" 
-                        onChange={handleInputChange}
-                    />
-                    <input class="endDateInput" 
-                        value={dateInputs.endDate}
-                        name="endDate"
-                        placeholder="ex) 2021-07-30"
-                        onChange={handleInputChange}
-                    />
-                </div>
-
-                <div class="dateInputFormTail">
+            {/* <div class="dateInputFormTail">
                     <button class="submitBtn"
                         onClick={() => {
                             if(window.confirm('형식을 맞춰 썼습니까?')===true){
-                                getPrayerListsBetweenTwoDates();
+                                getPrayerListsOfThisWeek();
                             }
                             else{
                                 return false;
                             }
-                        }}>제출</button>
-                </div>
-            </div>
+                        }}>이번주 기도제목 모아보기</button>
+                </div> */}
 
             <DateCollectionPrayerLists data={prayerLists} />
 

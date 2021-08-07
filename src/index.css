@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -97,6 +101,7 @@ textarea:-ms-input-placeholder {
   text-align: center;
   letter-spacing: 1px;
 
+  text-decoration: none;
 }
 
 .pageHeaderUnderBar {
@@ -202,17 +207,28 @@ textarea:-ms-input-placeholder {
   padding-right: 10px;
 }
 
+.headWrapper {
+  margin: 0 auto;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 64px;
+  color: black;
+}
+
 
 .headWrapperDefault {
-  position: fixed;
+  /* position: fixed; */
+  /* position: absolute; */
   text-align: center;
-  z-index: 50;
-  z-index: 1;
+  /* z-index: 50;
+  z-index: 1; */
   width: 100%;
   height: 64px;
   color: white;
 
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
 
   left: 0;
   top: 0;
@@ -226,12 +242,13 @@ textarea:-ms-input-placeholder {
   z-index: 1;
   /* color: white ; */
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 
   width: 100%;
   height: 64px;
   top: 0;
   /* border-bottom: 1px solid #aaaaaa; */
-  opacity: 0.2;
+  opacity: 0;
 }
 
 .headText {
@@ -242,7 +259,8 @@ textarea:-ms-input-placeholder {
 }
 
 .bodyWrapper {
-  padding-top: 85px;
+  /* padding-top: 85px; */
+  padding-top: 15px;
   position: relative;
   /* display: inline-block; */
   /* clear: both; */
@@ -254,7 +272,8 @@ textarea:-ms-input-placeholder {
 
   margin: 0 auto;
   position: relative;
-  padding-top: 95px;
+  /* padding-top: 95px; */
+  padding-top: 15px;
 
   animation: fadeInFromBottom 1.0s ease-in-out;
 
@@ -276,7 +295,7 @@ textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 
-  padding: 0 20px;
+  padding: 0 20spx;
   
   width: 90%;
   height: 355px;

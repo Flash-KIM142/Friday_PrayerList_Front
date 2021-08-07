@@ -92,7 +92,7 @@ const Home = () => {
                         </Link>
                     </div> */}
                     <Link to="/dateCollection">
-                        <button class="dateCollectionBtn">오늘의 기도제목 모아보기</button>
+                        <button class="dateCollectionBtn">아번주 기도제목 모아보기</button>
                     </Link>
 
                 </div>

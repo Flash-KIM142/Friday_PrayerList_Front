@@ -14,9 +14,12 @@ const Header = () => {
     return (
         <Link to="/">
             <div class = {scrollPosition < 10 ? "headWrapperDefault" : "headWrapperScrollDown"}>
-                <div class="pageHeader">금요기도회</div>
+                <div class="pageHeader">금요기도회</div> 
                 {/* <div class="pageHeaderUnderBar" /> */}
             </div>
+            {/* <div class="headWrapper">
+                <div class="pageHeader">금요기도회</div>
+            </div> */}
         </Link>
     )
 };

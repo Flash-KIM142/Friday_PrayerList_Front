@@ -12,6 +12,9 @@ const PrayerListService = {
     getPrayerListsBetweenTwoDates: async(start, end) => {
         return axios.get(BASE_URL + "dateCollection/" + start + "/" + end);
     },
+    getPrayerListsOfThisWeek: async() => {
+        return axios.get(BASE_URL + "thisWeek");
+    },
     getPrayerListById : async (id) => {
         return axios.get(BASE_URL + "edit/" +id);
     },
