@@ -77,25 +77,13 @@ const PagedPrayerListContent = ( {data} ) => {
                                     }
                                     else{
                                         return false;
-                                    }}}>
-                                삭제</div>
+                                    }}}>삭제
+                                </div>
+                                <Link to={`copy/${data.id}`} style={{ color: "blue", }}>
+                                    복사
+                                </Link>
                             </div>
                         </div>
-                        {/* <div class="prayerListContentDltEdtBtn">
-                            <Link to={`/edit/${data.id}`}>
-                                <button class="editBtn">수정</button>
-                            </Link>
-
-                            <button class="deleteBtn" 
-                                onClick={() => {
-                                if(window.confirm('정말 삭제하시겠습니까?')===true){
-                                    deletePrayerList(data.id);
-                                }
-                                else{
-                                    return false;
-                                }
-                                }}>삭제</button>
-                        </div> */}
                     </div>
                 </div>
             )}

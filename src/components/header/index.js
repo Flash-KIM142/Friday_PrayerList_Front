@@ -12,7 +12,7 @@ const Header = () => {
     });
 
     return (
-        <Link to="/">
+        <Link to="/friday">
             <div class = {scrollPosition < 10 ? "headWrapperDefault" : "headWrapperScrollDown"}>
                 <div class="pageHeader">금요기도회</div> 
                 {/* <div class="pageHeaderUnderBar" /> */}

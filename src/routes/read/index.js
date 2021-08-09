@@ -6,18 +6,14 @@ import PagedPrayerLists from '../../components/pagedPrayerLists';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 
-const Home = () => {
+const Read = () => {
+    const [isClicked, setIsClicked] = useState(false);
+
     const [data, setData] = useState({
-        currentPage: null,
+        currentPage: 0,
         totalPage: 0,
         lists: [],
     });
-
-    // let props = {
-    //     currentPage: data.currentPage,
-    //     totalPage: data.totalPage,
-    //     lists: data.lists,
-    // }
 
     const pageNumber = [];
     for (let i = 0; i < data.totalPage; i++) {
@@ -27,7 +23,8 @@ const Home = () => {
     useEffect(()=> {
         getPagedPrayerLists();
         console.log(data.currentPage);
-    }, [data.currentPage])
+        setIsClicked(false);
+    }, [isClicked])
 
     const getPagedPrayerLists = () => {
         ApiService.getPagedPrayerLists(data.currentPage)
@@ -52,10 +49,8 @@ const Home = () => {
 
                 <div class="bodyWrapper">
 
-                    {/* arrow 함수 알아보고, log를 적극 활용하라 */}
                     {/* 기도제목 리스트 Form */}
                     <PagedPrayerLists {...data}/>
-                    {/* <PagedPrayerLists {...props}/> */}
 
                     <ul class="pagination">
                         {pageNumber.map((pageNum) =>
@@ -65,6 +60,7 @@ const Home = () => {
                                     class="paginationItemSelect"
                                     onClick={() => {
                                         setData({ currentPage: pageNum });
+                                        setIsClicked(true);
                                     }}
                                 >
                                     {pageNum}
@@ -75,6 +71,7 @@ const Home = () => {
                                     class="paginationItemNonSelect"
                                     onClick={() => {
                                         setData({ currentPage: pageNum });
+                                        setIsClicked(true);
                                     }}
                                 >
                                     {pageNum}
@@ -84,7 +81,7 @@ const Home = () => {
                     </ul>
 
                     <Link to="/dateCollection">
-                        <button class="dateCollectionBtn">아번주 기도제목 모아보기</button>
+                        <button class="dateCollectionBtn">이번주 기도제목 모아보기</button>
                     </Link>
 
                 </div>
@@ -95,4 +92,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Read;
